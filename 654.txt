@@ -1,0 +1,110 @@
+CREATE TABLE DIM_EMPLOYEE
+(EMP_ID INT,
+ EMP_NAME VARCHAR(25))
+ CREATE TABLE DIM_BRANCH
+(BRANCH_ID INT,
+ BRANCH_NAME VARCHAR(25))
+ CREATE TABLE DIM_PRODUCT
+(PROD_ID INT,
+ PROD_NAME VARCHAR(25),
+ BRAND_ID INT)
+CREATE TABLE DIM_BRAND
+ (BRAND_ID INT,
+  BRAND_NAME VARCHAR(25))
+ CREATE TABLE DIM_CUSTOMER
+(CUST_ID INT,
+ CUST_NAME VARCHAR(25))
+ CREATE TABLE FACT_SHOP
+ (EMP_ID INT,
+  BRANCH_ID INT,
+  PROD_ID INT,
+  CUST_ID INT)
+
+
+
+
+
+
+
+
+CREATE TABLE DIM_EMPLOYEE
+(EMP_ID INT,
+ EMP_NAME VARCHAR(25))
+ CREATE TABLE DIM_BRANCH
+(BRANCH_ID INT,
+ BRANCH_NAME VARCHAR(25))
+ CREATE TABLE DIM_PRODUCT
+(PROD_ID INT,
+ PROD_NAME VARCHAR(25))
+ CREATE TABLE DIM_CUSTOMER
+(CUST_ID INT,
+ CUST_NAME VARCHAR(25))
+ CREATE TABLE FACT_SHOP
+ (EMP_ID INT,
+  BRANCH_ID INT,
+  PROD_ID INT,
+  CUST_ID INT)
+
+
+
+
+
+
+CREATE TABLE DIM_customer
+   (
+       custid VARCHAR(6),
+       fname VARCHAR(30),
+       mname VARCHAR(30),
+       ltname VARCHAR(30),
+       city VARCHAR(15),
+       mobileno VARCHAR(10),
+       occupation VARCHAR(10),
+       dob DATE
+   )
+CREATE TABLE DIM_branch
+   (
+    bid VARCHAR(6),
+    bname VARCHAR(30),
+    bcity VARCHAR(30),
+   )
+ CREATE TABLE DIM_account
+   (
+      acnumber VARCHAR(6),
+      custid  VARCHAR(6),
+      bid VARCHAR(6),
+      opening_balance VARCHAR(7),
+      aod DATE,
+      atype VARCHAR(10),
+      astatus VARCHAR(10)
+    )
+CREATE TABLE DIM_trandetails
+    (   
+     tnumber VARCHAR(6),
+     acnumber VARCHAR(6),
+     dot DATE,
+     medium_of_transaction VARCHAR(20),
+     transaction_type VARCHAR(20),
+     transaction_amount VARCHAR(7)    
+     
+    ) 
+CREATE TABLE DIM_loan
+   (
+    loan_id VARCHAR(10),   
+    custid VARCHAR(6),
+    bid VARCHAR(6),
+    loan_amount VARCHAR(7)
+    )
+   CREATE TABLE FACT_BANK
+   (
+   custid VARCHAR(6),
+   bid VARCHAR(6),
+   acnumber VARCHAR(6),
+   tnumber VARCHAR(6),
+   loan_id VARCHAR(10)
+   )
+
+
+
+
+
+
